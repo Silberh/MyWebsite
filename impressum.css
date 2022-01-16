@@ -15,26 +15,33 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header {
-    text-align: center;
-}
-
 /*Navigation*/
 
-nav {
-    background-color: var(--three);
-    padding: 20px;
+header {
+    text-align: center;
     margin: 0px;
-    border-width: 0px;
+    padding: 20px;
     width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--three);
+    border-style: solid;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: calc(var(--trennlinie) * 2);
+    border-color: var(--three_light);
+}
+
+nav {
+    padding: 0px;
+    margin: 0px;
 }
 
 header a {
     color: var(--two);
     text-decoration: none;
     padding: 8px;
-    /*border: var(--one);
-    border-style: solid;*/
     border-radius: 10px;
     background-color: var(--one);
 }

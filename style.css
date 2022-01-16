@@ -3,7 +3,7 @@
     --two: black;
     --three: antiquewhite;
     --three_light: rgb(253, 248, 241);
-    --three_: rgba(250, 235, 215, 0.5);
+    /*--three_: rgba(250, 235, 215, 0.5);*/
     --trennlinie: 3px;
 }
 
@@ -16,13 +16,11 @@ body {
     margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-header {
-    text-align: center;
-}
 
 /*Navigation*/
 
 header {
+    text-align: center;
     margin: 0px;
     padding: 20px;
     width: 100%;
