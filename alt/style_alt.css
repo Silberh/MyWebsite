@@ -1,0 +1,124 @@
+:root {
+    --one: white;
+    --two: black;
+    --three: antiquewhite;
+    --three_light: rgb(253, 248, 241);
+    /*--three_: rgba(250, 235, 215, 0.5);*/
+    --trennlinie: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Navigation*/
+
+header {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--three);
+    border-style: solid;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: calc(var(--trennlinie) * 2);
+    border-color: var(--three_light);
+}
+
+nav {
+    margin: 0px;
+    padding: 0px;
+}
+
+header a {
+    color: var(--two);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--one);
+}
+
+.button :hover {
+    background-color: var(--three_light);
+    color: var(--two);
+}
+
+.spacing {
+    margin-right: 10px;
+}
+
+/*Start*/
+
+.start {
+    background-color: var(--three_light);
+    padding-top: 125px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/*Main*/
+
+section {
+    max-width: 1080px;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--one);
+}
+
+section p, h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+hr {
+    border: var(--trennlinie) solid var(--three);
+    padding: 0px;
+    margin: 0px;
+}
+
+main a {
+    color: var(--two);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--one);
+}
+
+main a :hover {
+    background-color: var(--three_light);
+    color: var(--two);
+}
+/*footer*/
+
+footer {
+    color: var(--two);
+    text-decoration: none;
+    padding: 8px;
+    background-color: var(--three);
+    padding: 15px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--two);
+    text-decoration: underline;
+    padding: 8px;
+}
+
+footer :hover {
+    color: var(--two);
+    font-weight: bold;
+}
