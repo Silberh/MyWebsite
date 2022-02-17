@@ -13,7 +13,7 @@
   :root {
     --one: black;
     --two: white;
-    --three: antiquewhite;
+    --three: black;
     --three_light: rgb(253, 248, 241);
     --four: rgb(90, 78, 71);
   }
