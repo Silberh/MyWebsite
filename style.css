@@ -13,12 +13,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --trennlinie: 3px;
-
-    --textcolor: white;
+    --textcolor: white; /*textcolor und bg getauscht*/
     --background: black;
-    --accent: rgb(253, 248, 241);
-    --secondary: rgb(90, 78, 71);
+    --accent: rgb(90, 78, 71); /*accent und secondary getauscht*/
+    --secondary: rgb(253, 248, 241);
   }
 }
 
@@ -225,7 +223,7 @@ h2, p {
   {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--black); /* hamburger X */
+    background: var(--textcolor); /* hamburger X */
   }
   #menuToggle input:checked ~ span:nth-last-child(3)
   {
