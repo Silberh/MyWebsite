@@ -1,26 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 :root {
-    --white: white;
-    --black: black;
-    --navbg: rgb(90, 78, 71);
-    --navlogo: rgb(253, 248, 241);
-    --trennlinie: 3px;
+  --trennliniepx: 3px;
 
-    --textcolor: black;
-    --background: antiquewhite;
-    --accent: rgb(253, 248, 241);
-    --secondary: rgb(90, 78, 71);
+  --navlogo: rgb(253, 248, 241); /*Hellbeige*/
+
+  /*nav Vollbild*/
+  --navbg: rgb(90, 78, 71); /*Braun*/
+  --navlinkbg: white;
+  --navlinkhoverbg: antiquewhite;
+
+  /*nav kleine Seite*/
+  --navmobiletext: rgb(90, 78, 71); /*Braun*/
+  --navmobilehover: black;
+  --navmobilebg: rgb(253, 248, 241); /*Hellbeige*/
+  --hamburger3: white;
+  --hamburgerX: black;
+
+  /*Angaben Website*/
+  --textcolor: black;
+  --background: antiquewhite;
+  --trennlinie: rgb(253, 248, 241); /*Hellbeige*/
+
+  --textcolor: black;
+  --background: rgb(253, 248, 241); /*Hellbeige*/
+  --trennlinie: white;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { /*Darkmode*/
   :root {
-    --navbg: black;
-    
-    --textcolor: white; /*textcolor und bg getauscht*/
-    --background: black;
-    --accent: rgb(90, 78, 71); /*accent und secondary getauscht*/
-    --secondary: rgb(253, 248, 241);
+    /* #161E33 dunkelblau - #162B47 blau - #5E778A helltürkis - #2E546B türkis */
+
+    --navlogo: #5E778A; /*helltürkis*/
+    /*nav Vollbild*/
+    --navbg: #2E546B; /*türkis*/
+    --navlinkbg: #161E33; /*dunkelblau*/
+    --navlinkhoverbg: #162B47; /*blau*/
+    /*nav kleine Seite*/
+    --navmobiletext: #5E778A; /*helltürkis*/
+    --navmobilehover: white;
+    --navmobilebg: #161E33; /*dunkelblau*/
+    --hamburger3: #5E778A; /*helltürkis*/
+    --hamburgerX: white;
+    /*Angaben Website*/
+    --textcolor: white;
+    --background: #162B47; /*blau*/
+    --trennlinie: #5E778A; /*helltürkis*/
+  
   }
 }
 
@@ -52,8 +78,8 @@ div {
 
 section {
   border-bottom-style: solid;
-  border-bottom-width: calc(var(--trennlinie) * 2);
-  border-bottom-color: var(--accent);
+  border-bottom-width: calc(var(--trennliniepx) * 2);
+  border-bottom-color: var(--trennlinie);
 }
 
 h2, p {
@@ -82,8 +108,8 @@ h2 {
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  border-bottom-width: calc(var(--trennlinie) * 2);
-  border-color: var(--accent);
+  border-bottom-width: calc(var(--trennliniepx) * 2);
+  border-color: var(--trennlinie);
 }
 
 .logo {
@@ -142,11 +168,11 @@ h2 {
     padding: 8px;
     margin: 4px;
     border-radius: 5px;
-    background-color: var(--accent);
+    background-color: var(--navlinkbg);
   }
 
   #menu a:hover {
-    background-color: var(--background);
+    background-color: var(--navlinkhoverbg);
     /*font-weight: bold;
     font-style: italic;*/
   }
@@ -176,13 +202,13 @@ h2 {
   #menuToggle a
   {
     text-decoration: none;
-    color: var(--secondary); /*nav schriftfarbe*/
+    color: var(--navmobiletext); /*nav schriftfarbe*/
 
     transition: color 0.3s ease;
   }
   #menuToggle a:hover
   {
-    color: var(--black); /*nav schriftfarbe hover*/
+    color: var(--navmobilehover); /*nav schriftfarbe hover*/
   }
   #menuToggle input
   {
@@ -208,7 +234,7 @@ h2 {
     margin-bottom: 5px;
     position: relative;
 
-    background: var(--white); /* hamburger menu 3 Striche */
+    background: var(--hamburger3); /* hamburger menu 3 Striche */
     border-radius: 3px;
 
     z-index: 2;
@@ -231,7 +257,7 @@ h2 {
   {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--textcolor); /* hamburger X */
+    background: var(--hamburgerX); /* hamburger X */
   }
   #menuToggle input:checked ~ span:nth-last-child(3)
   {
@@ -250,7 +276,7 @@ h2 {
     padding: 50px;
     padding-top: 125px;
 
-    background: var(--accent); /* nav bg */
+    background: var(--navmobilebg); /* nav bg */
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
 
