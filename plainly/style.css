@@ -16,12 +16,12 @@
     padding: 0px; 
     /*font-family: "Avenir Next", "Avenir", sans-serif;*/
     font-family: 'Poppins', sans-serif;
+    background: var(--backgroundcolor); /*allgemeine Hintergrundfarbe*/
 }
 
  body
  {
-   background: var(--backgroundcolor);
-   color: var(--maincolor);
+   color: var(--maincolor); /*Schriftfarbe im body*/
  }
  
  @media (max-width:750px) {
@@ -46,7 +46,6 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     text-decoration: none;
     color: var(--maincolor); /*Schriftfarbe im Toggle menu*/
-    
     transition: color 0.3s ease;
     }
     
@@ -144,6 +143,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     padding: 10px 0;
     font-size: 22px;
+    background-color: #00000000; /*durchsichtig*/
     }
     
     #menuToggle input:checked ~ ul
@@ -152,12 +152,15 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     }
 
  }
-
  @media (min-width:750px) {
     input, span{
       display: none;
     }
   
+    header{
+        margin-bottom: 45px;
+    }
+
     /*.logo {
       text-align: left;
       padding-left: 0px;
@@ -168,7 +171,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     #menu {
       text-align: right;
       margin: 0px;
-      padding: 20px;
+      padding: 10px; /*beeinflusst höhe navbar*/
       padding-right: 70px;
       width: 100%;
       position: fixed;
@@ -186,6 +189,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
   
     #menu li {
       display: inline; /*macht list items nebeneinander*/
+      background-color: #00000000; /*durchsichtig*/
     }
   
     #menu a {
@@ -193,10 +197,10 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
       text-decoration: none;
       padding: 8px;
       margin: 4px;
+      background-color: #00000000; /*durchsichtig*/
     }
   
     #menu a:hover {
       color: var(--accentcolor);
     }
-  }
-  
+ }
