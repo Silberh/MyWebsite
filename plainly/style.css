@@ -33,8 +33,8 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     display: block;
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 25px; /*Position hamburger menu*/
+    left: 25px;
     
     z-index: 1;
     
@@ -127,7 +127,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    height: 600px; /*Muss vermutlich noch angepasst werden*/
+    height: auto; /*Muss evtl noch angepasst werden*/
     
     background: var(--secondaryaccentcolor); /*Background toggle menu*/
     list-style-type: none;
