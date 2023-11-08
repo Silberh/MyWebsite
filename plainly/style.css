@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-/*regular,medium,bold*/
+/*regular,medium,bold https://fonts.google.com/specimen/Poppins */
 
 :root{
     /* Farben */
@@ -31,10 +31,13 @@ html{
   background-color: transparent;
   color: var(--backgroundcolor); /*Schriftfarbe logo*/
  }
-
 .logo a{
   color: var(--backgroundcolor); /*Schriftfarbe logo*/
   text-decoration: none;
+  font-weight: 700;
+}
+.logo a:hover{
+  color: var(--backgroundcolor);
 }
 
  @media (max-width:750px) {
@@ -166,7 +169,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    height: 1000; /*höhe box/Hintergrund toggle menu*/
+    height: 1000px; /*höhe box/Hintergrund toggle menu*/
     
     background: var(--secondarycolor); /*Background toggle menu viereck*/
     list-style-type: none;
@@ -207,7 +210,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
       margin: 0px;
       padding: 5px;
       padding-left: 70px;
-      width: 50%;
+      width: auto;
       text-align: left;
       top: 0px;
       left: 0px;
@@ -252,4 +255,30 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
 
  main{
   margin: 25px;
+ }
+
+
+main a{
+  color: var(--secondarycolor);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover{
+  color: var(--accentcolor);
+}
+
+
+footer{
+  background-color: var(--maincolor);
+  padding: 5px;
+}
+ footer li{
+  display: inline;
+  padding: 5px;
+ }
+ footer a{
+  color: var(--backgroundcolor);
+ }
+ footer a:hover{
+  color: var(--accentcolor);
  }
