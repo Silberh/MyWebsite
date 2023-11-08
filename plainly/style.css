@@ -8,7 +8,6 @@
     --backgroundcolor: #e9efff;
     --accentcolor: #ec8887;
     --secondaryaccentcolor: #ddcce0;
-    --thresholdtogglemenu: 750px;
 }
 
 *{
@@ -16,7 +15,10 @@
     padding: 0px; 
     /*font-family: "Avenir Next", "Avenir", sans-serif;*/
     font-family: 'Poppins', sans-serif;
-    background: var(--backgroundcolor); /*allgemeine Hintergrundfarbe*/
+}
+
+html{
+  background: var(--backgroundcolor); /*allgemeine Hintergrundfarbe*/
 }
 
  body
@@ -24,15 +26,45 @@
    color: var(--maincolor); /*Schriftfarbe im body*/
  }
  
+ .logo{
+  position: fixed;
+  background-color: transparent;
+  color: var(--backgroundcolor); /*Schriftfarbe logo*/
+ }
+
  @media (max-width:750px) {
 /* Toggle menu für Handys
 nav https://codepen.io/erikterwan/pen/EVzeRP,
 link für Referenz und Erklärungen zu einzelnen Zeilen */
 
+    header{
+      padding-bottom: 60px;/*leerer Platz zum text*/
+    }
+
+    nav{
+      padding: 0px;
+      margin: 0px;
+      height: 25px;
+      width: 100%;
+      top: 0px;
+      background-color: var(--maincolor); /*hintergrund navbar wenn toggle menu zu*/
+      padding-bottom: 45px;
+      position: fixed;
+    }
+
+    .logo{
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      left: 50%;
+      top: 35px;
+      transform: translate(-50%, -50%);
+    }
+
     #menuToggle
     {
     display: block;
-    position: relative;
+    position: fixed;
     top: 25px; /*Position hamburger menu*/
     left: 25px;
     
@@ -40,12 +72,14 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     
     -webkit-user-select: none;
     user-select: none;
+
+    background-color: transparent;
     }
     
     #menuToggle a
     {
     text-decoration: none;
-    color: var(--maincolor); /*Schriftfarbe im Toggle menu*/
+    color: var(--backgroundcolor); /*Schriftfarbe im Toggle menu*/
     transition: color 0.3s ease;
     }
     
@@ -80,7 +114,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin-bottom: 5px;
     position: relative;
     
-    background: var(--maincolor); /*Hamburger menu geschlossen*/
+    background: var(--backgroundcolor); /*Hamburger menu geschlossen Farbe der drei Striche*/
     border-radius: 3px;
     
     z-index: 1;
@@ -106,7 +140,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--maincolor);
+    background: var(--secondaryaccentcolor); /*Hamburger menu offen Farbe des kreuzes*/
     }
     
     #menuToggle input:checked ~ span:nth-last-child(3)
@@ -123,13 +157,13 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     #menu
     {
     position: absolute;
-    width: 300px;
+    width: 200px; /*Breite, im Original 300px*/
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    height: auto; /*Muss evtl noch angepasst werden*/
+    height: 1000; /*höhe box/Hintergrund toggle menu*/
     
-    background: var(--secondaryaccentcolor); /*Background toggle menu*/
+    background: var(--secondarycolor); /*Background toggle menu viereck*/
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     
@@ -143,7 +177,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     padding: 10px 0;
     font-size: 22px;
-    background-color: #00000000; /*durchsichtig*/
+    background-color: transparent; /*durchsichtig*/
     }
     
     #menuToggle input:checked ~ ul
@@ -153,20 +187,26 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
 
  }
  @media (min-width:750px) {
+  /*Menu for computers*/
+
     input, span{
       display: none;
     }
   
     header{
-        margin-bottom: 45px;
+      padding-bottom: 35px;/*leerer Platz zum text*/
     }
 
-    /*.logo {
+    .logo{
+      z-index: 3;
+      margin: 0px;
+      padding: 5px;
+      padding-left: 70px;
+      width: 50%;
       text-align: left;
-      padding-left: 0px;
-      padding-right: 0px;
-      left: 70px;
-    }*/
+      top: 0px;
+      left: 0px;
+    }
   
     #menu {
       text-align: right;
@@ -178,7 +218,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
       top: 0px;
       right: 0px;
       z-index: 2;
-      background-color: var(--secondaryaccentcolor); /*Hintergrundfarbe Navigation*/
+      background-color: var(--maincolor); /*Hintergrundfarbe Navigation*/
     }
   
     #menu ul {
@@ -189,18 +229,22 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
   
     #menu li {
       display: inline; /*macht list items nebeneinander*/
-      background-color: #00000000; /*durchsichtig*/
+      background-color: transparent; /*durchsichtig*/
     }
   
     #menu a {
-      color: var(--maincolor); /*Textfarbe in nav*/
+      color: var(--backgroundcolor); /*Textfarbe in nav*/
       text-decoration: none;
       padding: 8px;
       margin: 4px;
-      background-color: #00000000; /*durchsichtig*/
+      background-color: transparent; /*durchsichtig*/
     }
   
     #menu a:hover {
       color: var(--accentcolor);
     }
+ }
+
+ main{
+  margin: 25px;
  }
