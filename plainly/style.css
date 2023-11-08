@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/*regular,medium,bold*/
+
 :root{
     /* Farben */
     --maincolor: #111e62;
@@ -11,7 +14,8 @@
 *{
     margin: 0px;
     padding: 0px; 
-    font-family: "Avenir Next", "Avenir", sans-serif;
+    /*font-family: "Avenir Next", "Avenir", sans-serif;*/
+    font-family: 'Poppins', sans-serif;
 }
 
  body
@@ -164,11 +168,13 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
       text-align: right;
       margin: 0px;
       padding: 20px;
+      padding-right: 70px;
       width: 100%;
       position: fixed;
       top: 0px;
-      right: 50px;
+      right: 0px;
       z-index: 2;
+      background-color: var(--secondaryaccentcolor); /*Hintergrundfarbe Navigation*/
     }
   
     #menu ul {
@@ -182,18 +188,14 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     }
   
     #menu a {
-      color: var(--textcolor);
+      color: var(--maincolor); /*Textfarbe in nav*/
       text-decoration: none;
       padding: 8px;
       margin: 4px;
-      border-radius: 5px;
-      background-color: var(--navlinkbg);
     }
   
     #menu a:hover {
-      background-color: var(--navlinkhoverbg);
-      /*font-weight: bold;
-      font-style: italic;*/
+      color: var(--accentcolor);
     }
   }
   
