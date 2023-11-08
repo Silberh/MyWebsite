@@ -32,6 +32,11 @@ html{
   color: var(--backgroundcolor); /*Schriftfarbe logo*/
  }
 
+.logo a{
+  color: var(--backgroundcolor); /*Schriftfarbe logo*/
+  text-decoration: none;
+}
+
  @media (max-width:750px) {
 /* Toggle menu für Handys
 nav https://codepen.io/erikterwan/pen/EVzeRP,
