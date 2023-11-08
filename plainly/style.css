@@ -81,7 +81,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin-bottom: 5px;
     position: relative;
     
-    background: var(--maincolor); /*Hamburger menu previous*/
+    background: var(--maincolor); /*Hamburger menu geschlossen*/
     border-radius: 3px;
     
     z-index: 1;
@@ -128,6 +128,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
+    height: 600px; /*Muss vermutlich noch angepasst werden*/
     
     background: var(--secondaryaccentcolor); /*Background toggle menu*/
     list-style-type: none;
