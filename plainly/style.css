@@ -35,6 +35,7 @@ html{
   color: var(--backgroundcolor); /*Schriftfarbe logo*/
   text-decoration: none;
   font-weight: 700;
+  font-size: 24px; /*24px*/
 }
 .logo a:hover{
   color: var(--backgroundcolor);
@@ -67,6 +68,10 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
       left: 50%;
       top: 35px;
       transform: translate(-50%, -50%);
+    }
+
+    .logo a{
+      font-size: 36px;
     }
 
     #menuToggle
