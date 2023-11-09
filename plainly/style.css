@@ -148,7 +148,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--secondaryaccentcolor); /*Hamburger menu offen Farbe des kreuzes*/
+    background: var(--accentcolor); /*Hamburger menu offen Farbe des kreuzes*/
     }
     
     #menuToggle input:checked ~ span:nth-last-child(3)
@@ -165,7 +165,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     #menu
     {
     position: absolute;
-    width: 200px; /*Breite, im Original 300px*/
+    width: 750px; /*Breite, im Original 300px*/
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
