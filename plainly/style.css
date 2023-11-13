@@ -1,289 +1,342 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 /*regular,medium,bold https://fonts.google.com/specimen/Poppins */
 
-:root{
-    /* Farben */
-    --maincolor: #111e62;
-    --secondarycolor: #001cb6;
-    --backgroundcolor: #e9efff;
-    --accentcolor: #ec8887;
-    --secondaryaccentcolor: #ddcce0;
+:root {
+  /* Farben */
+  --maincolor: #111E62;
+  --secondarycolor: #001CB6;
+  --backgroundcolor: #e9efff;
+  --tertiarycolor: #FFFFFF;
+  --accentcolor: #ec8887;
+  --secondaryaccentcolor: #ddcce0;
 }
 
-*{
-    margin: 0px;
-    padding: 0px; 
-    /*font-family: "Avenir Next", "Avenir", sans-serif;*/
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  /*font-family: "Avenir Next", "Avenir", sans-serif;*/
+  font-family: 'Poppins', sans-serif;
 }
 
-html{
-  background: var(--backgroundcolor); /*allgemeine Hintergrundfarbe*/
+html {
+  background: var(--backgroundcolor);
+  /*allgemeine Hintergrundfarbe*/
 }
 
- body
- {
-   color: var(--maincolor); /*Schriftfarbe im body*/
- }
- 
- .logo{
+body {
+  color: var(--maincolor);
+  /*Schriftfarbe im body*/
+}
+
+.logo {
   position: fixed;
   background-color: transparent;
-  color: var(--backgroundcolor); /*Schriftfarbe logo*/
- }
-.logo a{
-  color: var(--backgroundcolor); /*Schriftfarbe logo*/
+  color: var(--backgroundcolor);
+  /*Schriftfarbe logo*/
+}
+
+.logo a {
+  color: var(--backgroundcolor);
+  /*Schriftfarbe logo*/
   text-decoration: none;
   font-weight: 700;
-  font-size: 24px; /*24px*/
+  font-size: 24px;
+  /*24px*/
 }
-.logo a:hover{
+
+.logo a:hover {
   color: var(--backgroundcolor);
 }
 
- @media (max-width:750px) {
-/* Toggle menu für Handys
+@media (max-width:750px) {
+  /* Toggle menu für Handys
 nav https://codepen.io/erikterwan/pen/EVzeRP,
 link für Referenz und Erklärungen zu einzelnen Zeilen */
 
-    header{
-      padding-bottom: 60px;/*leerer Platz zum text*/
-    }
+  header {
+    padding-bottom: 60px;
+    /*leerer Platz zum text*/
+  }
 
-    nav{
-      padding: 0px;
-      margin: 0px;
-      height: 25px;
-      width: 100%;
-      top: 0px;
-      background-color: var(--maincolor); /*hintergrund navbar wenn toggle menu zu*/
-      padding-bottom: 45px;
-      position: fixed;
-    }
+  nav {
+    padding: 0px;
+    margin: 0px;
+    height: 25px;
+    width: 100%;
+    top: 0px;
+    background-color: var(--maincolor);
+    /*hintergrund navbar wenn toggle menu zu*/
+    padding-bottom: 45px;
+    position: fixed;
+  }
 
-    .logo{
-      margin: 0px;
-      padding: 0px;
-      text-align: center;
-      left: 50%;
-      top: 35px;
-      transform: translate(-50%, -50%);
-    }
+  .logo {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    left: 50%;
+    top: 35px;
+    transform: translate(-50%, -50%);
+  }
 
-    .logo a{
-      font-size: 36px;
-    }
+  .logo a {
+    font-size: 36px;
+  }
 
-    #menuToggle
-    {
+  #menuToggle {
     display: block;
     position: fixed;
-    top: 25px; /*Position hamburger menu*/
+    top: 25px;
+    /*Position hamburger menu*/
     left: 25px;
-    
+
     z-index: 1;
-    
+
     -webkit-user-select: none;
     user-select: none;
 
     background-color: transparent;
-    }
-    
-    #menuToggle a
-    {
+  }
+
+  #menuToggle a {
     text-decoration: none;
-    color: var(--backgroundcolor); /*Schriftfarbe im Toggle menu*/
+    color: var(--backgroundcolor);
+    /*Schriftfarbe im Toggle menu*/
     transition: color 0.3s ease;
-    }
-    
-    #menuToggle a:hover
-    {
-    color: var(--accentcolor); /*Schriftfarbe im Toggle menu hover*/
-    }
-    
-    
-    #menuToggle input
-    {
+  }
+
+  #menuToggle a:hover {
+    color: var(--accentcolor);
+    /*Schriftfarbe im Toggle menu hover*/
+  }
+
+
+  #menuToggle input {
     display: block;
     width: 40px;
     height: 32px;
     position: absolute;
     top: -7px;
     left: -5px;
-    
+
     cursor: pointer;
-    
+
     opacity: 0;
     z-index: 2;
-    
-    -webkit-touch-callout: none;
-    }
 
-    #menuToggle span
-    {
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    
-    background: var(--backgroundcolor); /*Hamburger menu geschlossen Farbe der drei Striche*/
-    border-radius: 3px;
-    
-    z-index: 1;
-    
-    transform-origin: 4px 0px;
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-    }
-    
-    #menuToggle span:first-child
-    {
-    transform-origin: 0% 0%;
-    }
-    
-    #menuToggle span:nth-last-child(2)
-    {
-    transform-origin: 0% 100%;
-    }
 
-    #menuToggle input:checked ~ span
-    {
+    background: var(--backgroundcolor);
+    /*Hamburger menu geschlossen Farbe der drei Striche*/
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--secondaryaccentcolor); /*Hamburger menu offen Farbe des kreuzes*/
-    }
-    
-    #menuToggle input:checked ~ span:nth-last-child(3)
-    {
+    background: var(--secondaryaccentcolor);
+    /*Hamburger menu offen Farbe des kreuzes*/
+  }
+
+  #menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
-    }
-    
-    #menuToggle input:checked ~ span:nth-last-child(2)
-    {
-    transform: rotate(-45deg) translate(0, -1px);
-    }
+  }
 
-    #menu
-    {
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu {
     position: absolute;
-    width: 100vw; /*Breite, im Original 300px*/
+    width: 100vw;
+    /*Breite, im Original 300px*/
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    height: 100vh; /*höhe box/Hintergrund toggle menu, im Original 1000px*/
-    
-    background: var(--secondarycolor); /*Background toggle menu viereck*/
+    height: 100vh;
+    /*höhe box/Hintergrund toggle menu, im Original 1000px*/
+
+    background: var(--secondarycolor);
+    /*Background toggle menu viereck*/
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    
+
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    }
-    
-    #menu li
-    {
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
     padding: 10px 0;
     font-size: 22px;
-    background-color: transparent; /*durchsichtig*/
-    }
-    
-    #menuToggle input:checked ~ ul
-    {
-    transform: none;
-    }
+    background-color: transparent;
+    /*durchsichtig*/
+  }
 
- }
- @media (min-width:750px) {
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+
+}
+
+@media (min-width:750px) {
   /*Menu for computers*/
 
-    input, span{
-      display: none;
-    }
-  
-    header{
-      padding-bottom: 35px;/*leerer Platz zum text*/
-    }
+  input,
+  span {
+    display: none;
+  }
 
-    .logo{
-      z-index: 3;
-      margin: 0px;
-      padding: 5px;
-      padding-left: 70px;
-      width: auto;
-      text-align: left;
-      top: 0px;
-      left: 0px;
-    }
-  
-    #menu {
-      text-align: right;
-      margin: 0px;
-      padding: 10px; /*beeinflusst höhe navbar*/
-      padding-right: 70px;
-      width: 100%;
-      position: fixed;
-      top: 0px;
-      right: 0px;
-      z-index: 2;
-      background-color: var(--maincolor); /*Hintergrundfarbe Navigation*/
-    }
-  
-    #menu ul {
-      padding: 0px;
-      margin: 0px;
-      text-align: center;
-    }
-  
-    #menu li {
-      display: inline; /*macht list items nebeneinander*/
-      background-color: transparent; /*durchsichtig*/
-    }
-  
-    #menu a {
-      color: var(--backgroundcolor); /*Textfarbe in nav*/
-      text-decoration: none;
-      padding: 8px;
-      margin: 4px;
-      background-color: transparent; /*durchsichtig*/
-    }
-  
-    #menu a:hover {
-      color: var(--accentcolor);
-    }
- }
+  header {
+    padding-bottom: 35px;
+    /*leerer Platz zum text*/
+  }
 
- main{
-  margin: 25px;
- }
+  .logo {
+    z-index: 3;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 70px;
+    width: auto;
+    text-align: left;
+    top: 0px;
+    left: 0px;
+  }
 
+  #menu {
+    text-align: right;
+    margin: 0px;
+    padding: 10px;
+    /*beeinflusst höhe navbar*/
+    padding-right: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    background-color: var(--maincolor);
+    /*Hintergrundfarbe Navigation*/
+  }
 
-main a{
+  #menu ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  #menu li {
+    display: inline;
+    /*macht list items nebeneinander*/
+    background-color: transparent;
+    /*durchsichtig*/
+  }
+
+  #menu a {
+    color: var(--backgroundcolor);
+    /*Textfarbe in nav*/
+    text-decoration: none;
+    padding: 8px;
+    margin: 4px;
+    background-color: transparent;
+    /*durchsichtig*/
+  }
+
+  #menu a:hover {
+    color: var(--accentcolor);
+  }
+}
+
+main {
+  margin-top: 10px;
+}
+
+main a {
   color: var(--secondarycolor);
   text-decoration: none;
   font-weight: 500;
 }
-a:hover{
+
+a:hover {
   color: var(--accentcolor);
 }
 
+.content {
+  padding: 10px;
+  margin: 0px;
+  outline: solid 1px red;
+}
 
-footer{
+section {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  /*padding: 10px;*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.text {
+  padding: 10px;
+  background-color: red;
+  /*max-width: 300px;*/
+}
+
+.img {
+  object-fit: cover;
+  height: 200px;
+  padding: 0px;
+}
+
+footer {
   background-color: var(--maincolor);
   padding: 5px;
 }
- footer li{
+
+footer li {
   display: inline;
   padding: 5px;
- }
- footer a{
+}
+
+footer a {
   color: var(--backgroundcolor);
- }
- footer a:hover{
+}
+
+footer a:hover {
   color: var(--accentcolor);
- }
+}
