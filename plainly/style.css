@@ -289,7 +289,6 @@ a:hover {
 .content {
   padding: 10px;
   margin: 0px;
-  outline: solid 1px red;
 }
 
 section {
@@ -307,20 +306,19 @@ section {
 }
 
 .item {
+  padding: 0px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-.text {
+.item.text {
   padding: 10px;
-  background-color: red;
-  /*max-width: 300px;*/
+  background-color: var(--tertiarycolor);
 }
 
 .img {
-  object-fit: cover;
+  object-fit: fill;
   height: 200px;
-  padding: 0px;
 }
 
 footer {
