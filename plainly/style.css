@@ -5,10 +5,9 @@
   /* Farben */
   --maincolor: #111E62;
   --secondarycolor: #001CB6;
-  --backgroundcolor: #e9efff;
-  --tertiarycolor: #FFFFFF;
+  --tertiarycolor: #e9efff;
+  --white: #FFFFFF;
   --accentcolor: #ec8887;
-  --secondaryaccentcolor: #ddcce0;
 }
 
 * {
@@ -19,7 +18,7 @@
 }
 
 html {
-  background: var(--backgroundcolor);
+  background: var(--tertiarycolor);
   /*allgemeine Hintergrundfarbe*/
 }
 
@@ -31,12 +30,12 @@ body {
 .logo {
   position: fixed;
   background-color: transparent;
-  color: var(--backgroundcolor);
+  color: var(--tertiarycolor);
   /*Schriftfarbe logo*/
 }
 
 .logo a {
-  color: var(--backgroundcolor);
+  color: var(--tertiarycolor);
   /*Schriftfarbe logo*/
   text-decoration: none;
   font-weight: 700;
@@ -45,7 +44,7 @@ body {
 }
 
 .logo a:hover {
-  color: var(--backgroundcolor);
+  color: var(--tertiarycolor);
 }
 
 @media (max-width:750px) {
@@ -100,7 +99,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
 
   #menuToggle a {
     text-decoration: none;
-    color: var(--backgroundcolor);
+    color: var(--tertiarycolor);
     /*Schriftfarbe im Toggle menu*/
     transition: color 0.3s ease;
   }
@@ -134,7 +133,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     margin-bottom: 5px;
     position: relative;
 
-    background: var(--backgroundcolor);
+    background: var(--tertiarycolor);
     /*Hamburger menu geschlossen Farbe der drei Striche*/
     border-radius: 3px;
 
@@ -158,7 +157,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
   #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--secondaryaccentcolor);
+    background: var(--accentcolor);
     /*Hamburger menu offen Farbe des kreuzes*/
   }
 
@@ -258,7 +257,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
   }
 
   #menu a {
-    color: var(--backgroundcolor);
+    color: var(--tertiarycolor);
     /*Textfarbe in nav*/
     text-decoration: none;
     padding: 8px;
@@ -311,9 +310,15 @@ section {
   margin-bottom: 10px;
 }
 
-.item.text {
+.spacingrandb{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.item.colorinvert {
   padding: 10px;
-  background-color: var(--tertiarycolor);
+  background-color: var(--maincolor);
+  color: var(--tertiarycolor);
 }
 
 .img {
@@ -332,7 +337,7 @@ footer li {
 }
 
 footer a {
-  color: var(--backgroundcolor);
+  color: var(--tertiarycolor);
 }
 
 footer a:hover {
