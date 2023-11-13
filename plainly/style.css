@@ -170,11 +170,11 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
     #menu
     {
     position: absolute;
-    width: 200px; /*Breite, im Original 300px*/
+    width: 100vw; /*Breite, im Original 300px*/
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    height: 1000px; /*höhe box/Hintergrund toggle menu*/
+    height: 100vh; /*höhe box/Hintergrund toggle menu, im Original 1000px*/
     
     background: var(--secondarycolor); /*Background toggle menu viereck*/
     list-style-type: none;
