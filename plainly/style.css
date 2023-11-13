@@ -291,9 +291,9 @@ a:hover {
 }
 
 section {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -315,10 +315,14 @@ section {
   margin-bottom: 10px;
 }
 
-.item.colorinvert {
+.colorinvert {
   padding: 10px;
   background-color: var(--maincolor);
   color: var(--tertiarycolor);
+}
+
+.colordifferent{
+  background-color: var(--white);
 }
 
 .img {
