@@ -6,7 +6,7 @@
   --maincolor: #111E62;
   --secondarycolor: #001CB6;
   --tertiarycolor: #e9efff;
-  --darker:rgb(219, 228, 252);
+  --darker: rgb(219, 228, 252);
   --white: #FFFFFF;
   --accentcolor: #ec8887;
 }
@@ -310,22 +310,17 @@ section {
   flex-shrink: 1;
 }
 
-.spacingrandb{
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
 .colorinvert {
   padding: 10px;
   background-color: var(--maincolor);
   color: var(--tertiarycolor);
 }
 
-.colordifferent{
+.colordifferent {
   background-color: var(--darker);
 }
 
-.img {
+.dynamicimg {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -348,4 +343,8 @@ footer a {
 
 footer a:hover {
   color: var(--accentcolor);
+}
+
+.troubleshooting {
+  border: solid 1px red;
 }
