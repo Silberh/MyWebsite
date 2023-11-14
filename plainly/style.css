@@ -6,6 +6,7 @@
   --maincolor: #111E62;
   --secondarycolor: #001CB6;
   --tertiarycolor: #e9efff;
+  --darker:rgb(219, 228, 252);
   --white: #FFFFFF;
   --accentcolor: #ec8887;
 }
@@ -322,7 +323,7 @@ section {
 }
 
 .colordifferent{
-  background-color: var(--white);
+  background-color: var(--darker);
 }
 
 .img {
