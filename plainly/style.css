@@ -49,9 +49,7 @@ body {
 }
 
 @media (max-width:750px) {
-  /* Toggle menu für Handys
-nav https://codepen.io/erikterwan/pen/EVzeRP,
-link für Referenz und Erklärungen zu einzelnen Zeilen */
+  /* Toggle menu für Handys*/
 
   header {
     padding-bottom: 60px;
