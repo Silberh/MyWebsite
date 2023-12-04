@@ -9,10 +9,12 @@
 
     <!-- Contact Form-->
     <script src="index.js"></script>
-    <script type="text/javascript">//aus emailjs bei SDK Installation einfügen//</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
     <script type="text/javascript">
-        (function(){
-        emailjs.init("NL9FjzexdqNllEQiv"); })();
+        (function () {
+            emailjs.init("NL9FjzexdqNllEQiv");
+        })();
     </script>
     <!-- Ende -->
 </head>
@@ -133,10 +135,11 @@
 
                     <label for="subject">Message</label>
                     <fieldset>
-                        <textarea id="subject" placeholder="Your message" required></textarea>
+                        <textarea id="message" placeholder="Your message" required></textarea>
                     </fieldset>
 
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <button name="submit" type="submit" id="contact-submit"
+                        onclick="sendMail()">Submit</button><!-- data-submit="...Sending" -->
                 </form>
                 <br>
                 <p>Also visit us on <a href="https://www.instagram.com/plainly.app/">Instagram</a> for more information
