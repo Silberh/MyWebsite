@@ -5,8 +5,8 @@
   /* Farben */
   --maincolor: #111E62;
   --secondarycolor: #001CB6;
-  --tertiarycolor: #e9efff;
-  --darker: rgb(219, 228, 252);
+  --tertiarycolor: #f5f8ff; /*#e9efff*/
+  --darker: #dfeafd; /*rgb(219, 228, 252)*/
   --white: #FFFFFF;
   --accentcolor: #ec8887;
 }
@@ -208,7 +208,7 @@ link für Referenz und Erklärungen zu einzelnen Zeilen */
 @media (min-width:750px) {
   /*Menu for computers*/
 
-  input,
+  /*input,*/
   span {
     display: none;
   }
@@ -326,6 +326,81 @@ section {
   width: 100%;
   max-height: 200px;
 }
+/* Start Contact Form */
+
+#contactform {
+  max-width: 400px;
+  /*margin: 0 auto;*/
+  background: var(--tertiarycolor);
+  padding: 25px;
+  margin: 0px;
+  /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+}
+
+#contactform fieldset {
+  border: medium none;
+  margin: 0px 0 10px; /*Abstand Eingabefelder nach unten*/
+  width: 100%;
+  padding: 0px;
+  width: 100%;
+}
+
+#contactform input,
+#contactform textarea {
+  width: calc(100% - 20px);
+  border: 1px solid #ccc; /*Border Textfelder ohne hover*/
+  background: var(--white);
+  /*margin: 0 0 5px;*/ /*Abstand Eingabefelder nach unten*/
+  padding: 10px;
+}
+
+#contactform input:hover,
+#contactform textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa; /*Border Textfelder hover*/
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa; /*Border Textfelder wenn ins Feld geklickt*/
+}
+
+#contactform textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contactform button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: var(--maincolor); /*Button bg*/
+  color: var(--tertiarycolor); /*Button Textfarbe*/
+  margin: 0px; /*margin: 0 0 5px;*/
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contactform button[type="submit"]:hover {
+  background: var(--accentcolor); /*Button bg hover*/
+  -webkit-transition: backgroundcolor 0.3s ease-in-out;
+  -moz-transition: backgroundcolor 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contactform button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); /*Schatten während des klickens*/
+}
+
+#contactform input::placeholder, #contactform textarea::placeholder{
+  color: #888;
+}
+
+/* End Contact Form */
 
 footer {
   background-color: var(--maincolor);

@@ -43,10 +43,8 @@
     </header>
 
     <main>
-        <div class="content">
-            <h1>Site under construction</h1>
-        </div>
         <section id="info" class="colordifferent">
+            <h1>Site under construction</h1>
             <h2>What is Plainly</h2>
             <p>this is a description</p>
             <div class="container">
@@ -101,12 +99,42 @@
 
         <section id="contact" class="colordifferent">
             <h2>Contact</h2>
-            <p>
-                Contact us via e-mail at
-                <a href="mailto:contact@plainly.app.de">contact@plainly.app.de</a>
-            </p>
-            <p>or visit us on <a href="https://www.instagram.com/plainly.app/">Instagram</a></p>
+            <p>Feel free to contact us concerning any problem you might have with our services.
+                We'll help you to the best of our abilities</p>
+            <br>
+            <div>
+                <form id="contactform" action="/action_page.php" method="post">
+                    <h3>Get In Touch</h3>
+                    <p>Contact us with any questions you might have</p><br>
+
+                    <label for="name">Name</label>
+                    <fieldset>
+                        <input id="name" type="name" name="name" placeholder="Your name" required>
+                    </fieldset>
+
+                    <label for="email">Email address</label>
+                    <fieldset>
+                        <input id="email" type="email" name="email" placeholder="Your email" required />
+                    </fieldset>
+
+                    <label for="subject">Subject</label>
+                    <fieldset>
+                        <input id="subject" type="text" name="subject" placeholder="Subject of your query" (optional) />
+                    </fieldset>
+
+                    <label for="subject">Message</label>
+                    <fieldset>
+                        <textarea id="subject" placeholder="Your message" required></textarea>
+                    </fieldset>
+
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </form>
+                <br>
+                <p>Also visit us on <a href="https://www.instagram.com/plainly.app/">Instagram</a> for more information
+                    and tipps</p>
+            </div>
         </section>
+
     </main>
 
     <footer>
