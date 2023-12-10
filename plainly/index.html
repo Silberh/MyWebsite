@@ -2,21 +2,37 @@
 <html lang="de">
 
 <head>
-    <title>plainly.app</title>
+    <title>plainly-app</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" type="text/css" rel="stylesheet" />
 
-    <!-- Contact Form-->
-    <script src="index.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+
+<!-- Contact Form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function () {
-            emailjs.init("NL9FjzexdqNllEQiv");
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('NL9FjzexdqNllEQiv');
         })();
     </script>
-    <!-- Ende -->
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('template_u7ixlz9').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_i67j1hf', 'template_u7ixlz9', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+ <!-- Ende -->
 </head>
 
 <body>
@@ -114,13 +130,15 @@
                 We'll help you to the best of our abilities</p>
             <br>
             <div>
-                <form id="contactform" method="post"><!-- action="/action_page.php" -->
+                <form id="template_u7ixlz9" class="contact-form" action="action_page.html"><!--method="post" action="/action_page.php" -->
                     <h3>Get In Touch</h3>
                     <p>Contact us with any questions you might have</p><br>
 
+                    <input type="hidden" name="contact_number">
+
                     <label for="name">Name</label>
                     <fieldset>
-                        <input id="name" type="name" name="name" placeholder="Your name" required>
+                        <input id="name" type="text" name="name" placeholder="Your name" required>
                     </fieldset>
 
                     <label for="email">Email address</label>
@@ -133,13 +151,13 @@
                         <input id="subject" type="text" name="subject" placeholder="Subject of your query" (optional) />
                     </fieldset>
 
-                    <label for="subject">Message</label>
+                    <label for="message">Message</label>
                     <fieldset>
-                        <textarea id="message" placeholder="Your message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
                     </fieldset>
 
-                    <button name="submit" type="submit" id="contact-submit"
-                        onclick="sendMail()">Submit</button><!-- data-submit="...Sending" -->
+                    <button name="submit" type="submit" value="Send" id="contact-submit">Submit</button>
+                        
                 </form>
                 <br>
                 <p>Also visit us on <a href="https://www.instagram.com/plainly.app/">Instagram</a> for more information

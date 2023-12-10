@@ -4,3 +4,60 @@ https://youtu.be/dgcYOm8n8ME?si=NoInoUdyIiGswh_O
 
 Toggle navigation: https://codepen.io/erikterwan/pen/EVzeRP,
 link für Referenz und Erklärungen zu einzelnen Zeilen
+
+
+function sendMail() {
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+
+    //const serviceID = "service_i67j1hf";
+    //const templateID = "template_u7ixlz9";
+
+    emailjs
+        .send(service_i67j1hf, template_u7ixlz9, params)
+        .then((res) => {
+            document.getElementById("name").value = "";
+            email.getElementById("email").value = "";
+            subject.getElementById("subject").value = "";
+            message.getElementById("message").value = "";
+            console.log(res);
+            alert("Your message sent successfully");
+        })
+
+        .catch((err) => console.log(err));
+
+}
+
+
+---
+
+var templateParams = {
+    name: document.getElementById("name"),
+    email: document.getElementById("email"),
+    subject: document.getElementById("subject"),
+    message: document.getElementById("message"),
+};
+ 
+emailjs.send('service_i67j1hf', 'template_u7ixlz9', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+    ---
+        <!-- Contact Form-->
+    <script src="index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("NL9FjzexdqNllEQiv");
+        })();
+    </script>
+    <!-- Ende -->
+    onclick="sendMail()">Submit</button><!-- data-submit="...Sending" -->
