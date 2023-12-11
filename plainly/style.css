@@ -3,13 +3,12 @@
 
 :root {
   /* Farben */
-  --maincolor: #111E62;
-  --secondarycolor: #001CB6;
-  --tertiarycolor: #f5f8ff;
-  /*#e9efff*/
-  --darker: #dfeafd;
-  /*rgb(219, 228, 252)*/
-  --white: #FFFFFF;
+  --plainly_dark_blue: #020C42;
+  --plainly_blue: #001CB6;
+  --plainly_white: #FFFFFF;
+  --plainly_baby_blue: #D8E3FF;
+
+  --transparent_white: #ffffff85;
   --accentcolor: #ec8887;
 }
 
@@ -21,24 +20,24 @@
 }
 
 html {
-  background: var(--tertiarycolor);
+  background: var(--plainly_baby_blue);
   /*allgemeine Hintergrundfarbe*/
 }
 
 body {
-  color: var(--maincolor);
+  color: var(--plainly_dark_blue);
   /*Schriftfarbe im body*/
 }
 
 .logo {
   position: fixed;
   background-color: transparent;
-  color: var(--tertiarycolor);
+  color: var(--plainly_white);
   /*Schriftfarbe logo*/
 }
 
 .logo a {
-  color: var(--tertiarycolor);
+  color: var(--plainly_white);
   /*Schriftfarbe logo*/
   text-decoration: none;
   font-weight: 700;
@@ -47,7 +46,7 @@ body {
 }
 
 .logo a:hover {
-  color: var(--tertiarycolor);
+  color: var(--plainly_white);
 }
 
 @media (max-width:750px) {
@@ -64,7 +63,7 @@ body {
     height: 25px;
     width: 100%;
     top: 0px;
-    background-color: var(--maincolor);
+    background-color: var(--plainly_dark_blue);
     /*hintergrund navbar wenn toggle menu zu*/
     padding-bottom: 45px;
     position: fixed;
@@ -100,7 +99,7 @@ body {
 
   #menuToggle a {
     text-decoration: none;
-    color: var(--tertiarycolor);
+    color: var(--plainly_white);
     /*Schriftfarbe im Toggle menu*/
     transition: color 0.3s ease;
   }
@@ -134,7 +133,7 @@ body {
     margin-bottom: 5px;
     position: relative;
 
-    background: var(--tertiarycolor);
+    background: var(--plainly_white);
     /*Hamburger menu geschlossen Farbe der drei Striche*/
     border-radius: 3px;
 
@@ -158,7 +157,7 @@ body {
   #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--accentcolor);
+    background: var(--plainly_white);
     /*Hamburger menu offen Farbe des kreuzes*/
   }
 
@@ -181,7 +180,7 @@ body {
     height: 100vh;
     /*höhe box/Hintergrund toggle menu, im Original 1000px*/
 
-    background: var(--secondarycolor);
+    background: var(--plainly_blue);
     /*Background toggle menu viereck*/
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -240,7 +239,7 @@ body {
     top: 0px;
     right: 0px;
     z-index: 2;
-    background-color: var(--maincolor);
+    background-color: var(--plainly_dark_blue);
     /*Hintergrundfarbe Navigation*/
   }
 
@@ -258,7 +257,7 @@ body {
   }
 
   #menu a {
-    color: var(--tertiarycolor);
+    color: var(--plainly_white);
     /*Textfarbe in nav*/
     text-decoration: none;
     padding: 8px;
@@ -277,7 +276,7 @@ main {
 }
 
 main a {
-  color: var(--secondarycolor);
+  color: var(--plainly_blue);
   text-decoration: none;
   font-weight: 500;
 }
@@ -316,12 +315,12 @@ section {
 
 .colorinvert {
   padding: 10px;
-  background-color: var(--maincolor);
-  color: var(--tertiarycolor);
+  background-color: var(--plainly_dark_blue);
+  color: var(--plainly_white);
 }
 
 .colordifferent {
-  background-color: var(--darker);
+  background-color: var(--transparent_white);
 }
 
 .dynamicimg {
@@ -336,7 +335,7 @@ section {
 .contact-form {
   max-width: 400px;
   /*margin: 0 auto;*/
-  background: var(--tertiarycolor);
+  background: var(--transparent_white);
   padding: 25px;
   margin: 0px;
   /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
@@ -356,7 +355,7 @@ section {
   width: calc(100% - 20px);
   border: 1px solid #ccc;
   /*Border Textfelder ohne hover*/
-  background: var(--white);
+  background: var(--plainly_white);
   /*margin: 0 0 5px;*/
   /*Abstand Eingabefelder nach unten*/
   padding: 10px;
@@ -389,9 +388,9 @@ section {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: var(--maincolor);
+  background: var(--plainly_blue);
   /*Button bg*/
-  color: var(--tertiarycolor);
+  color: var(--plainly_white);
   /*Button Textfarbe*/
   margin: 0px;
   /*margin: 0 0 5px;*/
@@ -422,11 +421,11 @@ section {
 /* End Contact Form */
 
 .button:hover {
-  color: var(--white);
+  color: var(--plainly_white);
 }
 
 footer {
-  background-color: var(--maincolor);
+  background-color: var(--plainly_dark_blue);
   padding: 5px;
 }
 
@@ -436,7 +435,7 @@ footer li {
 }
 
 footer a {
-  color: var(--tertiarycolor);
+  color: var(--plainly_white);
 }
 
 footer a:hover {

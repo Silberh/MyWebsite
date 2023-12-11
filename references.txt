@@ -5,3 +5,14 @@ https://youtu.be/dgcYOm8n8ME?si=NoInoUdyIiGswh_O
 Toggle navigation: https://codepen.io/erikterwan/pen/EVzeRP,
 link für Referenz und Erklärungen zu einzelnen Zeilen
 
+:root {
+  /* Farben */
+  --maincolor: #111E62;
+  --secondarycolor: #001CB6;
+  --tertiarycolor: #f5f8ff;
+  /*#e9efff*/
+  --darker: #dfeafd;
+  /*rgb(219, 228, 252)*/
+  --white: #FFFFFF;
+  --accentcolor: #ec8887;
+}
