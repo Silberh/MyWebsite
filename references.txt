@@ -16,3 +16,5 @@ link für Referenz und Erklärungen zu einzelnen Zeilen
   --white: #FFFFFF;
   --accentcolor: #ec8887;
 }
+
+https://www.tutorialspoint.com/how-to-create-a-share-button-with-different-social-handles-using-html-and-css

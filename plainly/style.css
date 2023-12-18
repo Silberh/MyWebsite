@@ -3,12 +3,12 @@
 
 :root {
   /* Farben */
-  --plainly_dark_blue: #020C42;
-  --plainly_blue: #001CB6;
-  --plainly_white: #FFFFFF;
-  --plainly_baby_blue: #D8E3FF;
+  --plainly_dark_blue: #020C42; /*Schriftfarbe/dunkelste Farbe*/
+  --plainly_blue: #001CB6; /*Call to action*/
+  --plainly_white: #FFFFFF; /*BG*/
+  --plainly_baby_blue: #D8E3FF; /*Schatten*/
 
-  --transparent_white: #ffffff85;
+  --transparent_white: #ffffff85; /*#ecf2ff als noch helleres Blau, Konntrast zu weiß*/
   --accentcolor: #ec8887;
 }
 
