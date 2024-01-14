@@ -417,6 +417,18 @@ section {
 .contact-form textarea::placeholder {
   color: #888;
 }
+/*Kontakt*/
+ .error-name,
+ .error-message,
+ .error-mail,
+ .fail-message {
+   display: none;
+   color: red;
+ }
+
+ .success-message {
+   display: none;
+ }
 
 /* End Contact Form */
 
