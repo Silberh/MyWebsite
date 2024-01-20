@@ -1,202 +1,240 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <title>plainly-app</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" type="text/css" rel="stylesheet" />
 
-    <!--Mail-->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("NL9FjzexdqNllEQiv");
-      })();
-    </script>
-  </head>
+<head>
+  <title>plainly-app</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" type="text/css" rel="stylesheet" />
 
-  <body>
-    <header>
-      <nav role="navigation">
-        <div class="logo">
-          <h1><a href="index.html">Plainly.</a></h1>
+  <!--Mail-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("NL9FjzexdqNllEQiv");
+    })();
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav role="navigation" class="grid_wrapper">
+      <div class="logo">
+        <!--<h1><a href="index.html">Plainly</a></h1>-->
+        <a href="index.html"><img src="pictures/logo.svg" alt=""></a>
+      </div>
+
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="team.html">
+            <li>Team</li>
+          </a>
+          <a href="contact.html">
+            <li>Kontakt</li>
+          </a>
+        </ul>
+      </div>
+
+      <div id="language">
+        <img src="pictures/question_mark.svg" alt="question mark">
+        <img src="pictures/globe.svg" alt="select language">
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="newsroundup">
+      <div>
+        <img src="" alt="">
+      </div>
+      <div class="newsroundup_content">
+        <h2>News</h2>
+        <h1>Plainly Round II</h1>
+        <p>Plainly geht in die zweite Runde. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+          justo duo dolores et ea rebum.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="plainly_descsription">
+      <div>
+        <h1>Was ist Plainly?</h1>
+        <p>Plainly ist eine Cross-Platform App zur Vereinfachung von Texten mithilfe der OpenAI API.<br>
+          Verstehst Du manchmal komplizierte Texte nicht auf Anhieb? Mit Plainly ist das kein Problem mehr! Unsere App
+          ermöglicht es Dir, Texte ganz einfach einzuscannen und in eine leicht verständliche Sprache umzuwandeln. Aber
+          das ist noch nicht alles! Wir bieten Dir auch die Möglichkeit, diese vereinfachten Texte in eine Vielzahl von
+          Sprachen zu übersetzen.</p>
+      </div>
+      <div class="container">
+        <div class="item">
+          <h1>Mögliche Vereinfachungsoptionen</h1>
+          <p>Mit Plainly können Dokumente mit der Kamera eingescannt werden, über die Fotogalerie oder als PDF
+            hochgeladen werden. Alternativ können die Nutzer auch ein Freitext zur Vereinfachung eingeben. Der Text wird
+            auf dem Bild oder Dokument eingelesen und über die OpenAI API in einfachere Sprache vereinfacht.</p>
         </div>
-
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-
-          <ul id="menu">
-            <a href="index.html">
-              <li>Home</li>
-            </a>
-            <a href="">
-              <li>Team</li>
-            </a>
-            <a href="">
-              <li>Contact</li>
-            </a>
-            <a href="">
-              <li>FAQs</li>
-            </a>
-            <a href="about.html">
-              <li>About/Impressum</li>
-            </a>
-          </ul>
+        <img class="item" src="" alt=""><!-- Picture class item-->
+      </div>
+      <div class="container">
+        <div class="item">
+          <h1>Dokumente vereinfachen und übersetzen</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum
+            dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed
+            diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <section id="info">
-        <h1>Site under construction</h1>
-        <h2>What is Plainly</h2>
-        <p>this is a description</p>
-        <div class="container">
-          <div class="item">
-            <img
-              class="dynamicimg"
-              src="pictures/beispiel.png"
-              alt="Bild von Natur in Pastellfarben" />
-          </div>
-          <div class="item content">
-            <p>to the left you see a picture as an example for a picture</p>
-            <p>this is text, this is more text, this is even more text</p>
-          </div>
+        <img class="item" src="" alt=""><!-- Picture class item-->
+      </div>
+      <div class="container">
+        <div class="item">
+          <h1>Vereinfachte Texte exportieren</h1>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore
+            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum
+            dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed
+            diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
         </div>
-      </section>
+        <img class="item" src="" alt=""><!-- Picture class item-->
+      </div>
+    </section>
 
-      <section id="team" class="colordifferent">
-        <div class="spacingrandb">
-          <h2>learn more about us</h2>
-          <p>
-            We're a team of 7 students currently studying at the Media
-            Unisversity Stuttgart.
-          </p>
+    <section>
+      <h1>Du willst Plainly selbst testen?</h1>
+      <p>Bald gibt es Plainly erhältlich im Appstore und im Playstore...Lorem ipsum dolor sit amet, consetetur
+        sadipscing
+        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+        vero eos
+        et accusam et justo duo dolores et ea rebum.</p>
+      <div class="container">
+        <div class="item blue-box">
+          <h3>Für iOS herunterladen</h3>
+          <img class="store_icon" src="" alt=""><!--insert Picture-->
         </div>
-        <div class="container">
-          <div class="item colorinvert">
-            <h3>Name 1</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 2</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 3</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 4</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 5</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 6</h3>
-            <p>About Me</p>
-          </div>
-          <div class="item colorinvert">
-            <h3>Name 7</h3>
-            <p>About Me</p>
-          </div>
+        <div class="item blue-box">
+          <h3>Für Android herunterladen</h3>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          Feel free to contact us concerning any problem you might have with our
-          services. We'll help you to the best of our abilities
-        </p>
+
+
+</body>
+
+<footer>
+  <div class="container">
+    <ul class="item">
+      <li>2024 Plainly</li>
+      <li><img src="pictures/footer_line.svg" alt=""></li>
+      <li><a href="">Datenschutzerklärung</a></li><!--Datenschutzerklärung einfügen-->
+      <li><a href="about.html">Impressum</a></li>
+    </ul>
+    <ul class="item li_right">
+      <li>Folge Plainly auf</li>
+      <li><img src="pictures/instagram_glyph_black.svg" alt=""></li>
+    </ul>
+  </div>
+</footer>
+
+
+
+
+
+<body>
+  <p class="colorinvert">Veraltet:</p>
+  <section id="info">
+    <h1>Site under construction</h1>
+    <h2>What is Plainly</h2>
+    <p>this is a description</p>
+    <div class="container">
+      <div class="item">
+        <img class="dynamicimg" src="pictures/beispiel.png" alt="Bild von Natur in Pastellfarben" />
+      </div>
+      <div class="item content">
+        <p>to the left you see a picture as an example for a picture</p>
+        <p>this is text, this is more text, this is even more text</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Feel free to contact us concerning any problem you might have with our
+      services. We'll help you to the best of our abilities
+    </p>
+    <br />
+    <div>
+      <form id="template_u7ixlz9" class="contact-form">
+        <h3>Get In Touch</h3>
+        <p>Contact us with any questions you might have</p>
         <br />
-        <div>
-          <form id="template_u7ixlz9" class="contact-form">
-            <!--method="post" action="/action_page.php" -->
-            <h3>Get In Touch</h3>
-            <p>Contact us with any questions you might have</p>
-            <br />
 
-            <input type="hidden" name="contact_number" />
+        <input type="hidden" name="contact_number" />
 
-            <label for="name">Name</label>
-            <fieldset>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required />
-            </fieldset>
-            <p class="error-name">Bitte trage einen Namen ein!</p>
-            <label for="email">Email address</label>
-            <fieldset>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required />
-            </fieldset>
-            <p class="error-mail">Bitte trage eine richtige E-Mail ein!</p>
+        <label for="name">Name</label>
+        <fieldset>
+          <input id="name" type="text" name="name" placeholder="Your name" required />
+        </fieldset>
+        <p class="error-name">Bitte trage einen Namen ein!</p>
+        <label for="email">Email address</label>
+        <fieldset>
+          <input id="email" type="email" name="email" placeholder="Your email" required />
+        </fieldset>
+        <p class="error-mail">Bitte trage eine richtige E-Mail ein!</p>
 
-            <label for="subject">Subject</label>
-            <fieldset>
-              <input
-                id="subject"
-                type="text"
-                name="subject"
-                placeholder="Subject of your query"
-                (optional) />
-            </fieldset>
+        <label for="subject">Subject</label>
+        <fieldset>
+          <input id="subject" type="text" name="subject" placeholder="Subject of your query" (optional) />
+        </fieldset>
 
-            <label for="message">Message</label>
-            <fieldset>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your message"
-                required></textarea>
-            </fieldset>
-            <p class="error-message">Bitte trage eine Nachricht ein!</p>
+        <label for="message">Message</label>
+        <fieldset>
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </fieldset>
+        <p class="error-message">Bitte trage eine Nachricht ein!</p>
 
-            <button
-              name="submit"
-              type="submit"
-              value="Send"
-              id="contact-submit">
-              Submit
-            </button>
+        <button name="submit" type="submit" value="Send" id="contact-submit">
+          Submit
+        </button>
 
-            <p class="success-message">Danke für deine Nachricht!</p>
-            <p class="fail-message">
-              Mein Kontaktforumar steht leider aktuell nicht zur Verfügung.
-            </p>
-          </form>
+        <p class="success-message">Danke für deine Nachricht!</p>
+        <p class="fail-message">
+          Mein Kontaktforumar steht leider aktuell nicht zur Verfügung.
+        </p>
+      </form>
 
-          <br />
-          <p>
-            Also visit us on
-            <a href="https://www.instagram.com/plainly.app/">Instagram</a> for
-            more information and tipps
-          </p>
-        </div>
-      </section>
-    </main>
+      <br />
+      <p>
+        Also visit us on
+        <a href="https://www.instagram.com/plainly.app/">Instagram</a> for
+        more information and tipps
+      </p>
+    </div>
+  </section>
+  </main>
 
-    <footer>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Impressum</a></li>
-      </ul>
-    </footer>
-    <script src="./app.js"></script>
-  </body>
+  <footer>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Impressum</a></li>
+    </ul>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+
 </html>

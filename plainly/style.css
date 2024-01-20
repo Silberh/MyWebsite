@@ -3,13 +3,15 @@
 
 :root {
   /* Farben */
-  --plainly_dark_blue: #020C42; /*Schriftfarbe/dunkelste Farbe*/
-  --plainly_blue: #001CB6; /*Call to action*/
-  --plainly_white: #FFFFFF; /*BG*/
-  --plainly_baby_blue: #D8E3FF; /*Schatten*/
+  --dark_blue: #020C42;
+  --light_blue: #001CB6;
+  --light_blue_font: #D8E3FF;
+  --background_blue: #E9EFFF;
+  --white: #FFFFFF;
+  --red: #EB8888;
+  --muted_red: #DDCCE1;
 
-  --transparent_white: #ffffff85; /*#ecf2ff als noch helleres Blau, Konntrast zu weiß*/
-  --accentcolor: #ec8887;
+  --window-background: #020C4280;
 }
 
 * {
@@ -20,33 +22,54 @@
 }
 
 html {
-  background: var(--plainly_baby_blue);
+  background: var(--white);
   /*allgemeine Hintergrundfarbe*/
 }
 
 body {
-  color: var(--plainly_dark_blue);
+  color: var(--dark_blue);
   /*Schriftfarbe im body*/
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+p, li {
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .logo {
   position: fixed;
   background-color: transparent;
-  color: var(--plainly_white);
+  /*color: var(--dark_blue);*/
   /*Schriftfarbe logo*/
 }
 
 .logo a {
-  color: var(--plainly_white);
+  color: var(--dark_blue);
   /*Schriftfarbe logo*/
   text-decoration: none;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 50px;
   /*24px*/
 }
 
 .logo a:hover {
-  color: var(--plainly_white);
+  color: var(--dark_blue);
 }
 
 @media (max-width:750px) {
@@ -63,10 +86,14 @@ body {
     height: 25px;
     width: 100%;
     top: 0px;
-    background-color: var(--plainly_dark_blue);
+    background-color: var(--light_blue);
     /*hintergrund navbar wenn toggle menu zu*/
     padding-bottom: 45px;
     position: fixed;
+
+    border-top: var(--light_blue);
+    border-top-width: 15px;
+    border-style: solid;
   }
 
   .logo {
@@ -99,13 +126,13 @@ body {
 
   #menuToggle a {
     text-decoration: none;
-    color: var(--plainly_white);
+    color: var(--white);
     /*Schriftfarbe im Toggle menu*/
     transition: color 0.3s ease;
   }
 
   #menuToggle a:hover {
-    color: var(--accentcolor);
+    color: var(--red);
     /*Schriftfarbe im Toggle menu hover*/
   }
 
@@ -133,7 +160,7 @@ body {
     margin-bottom: 5px;
     position: relative;
 
-    background: var(--plainly_white);
+    background: var(--white);
     /*Hamburger menu geschlossen Farbe der drei Striche*/
     border-radius: 3px;
 
@@ -157,7 +184,7 @@ body {
   #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--plainly_white);
+    background: var(--white);
     /*Hamburger menu offen Farbe des kreuzes*/
   }
 
@@ -180,7 +207,7 @@ body {
     height: 100vh;
     /*höhe box/Hintergrund toggle menu, im Original 1000px*/
 
-    background: var(--plainly_blue);
+    background: var(--light_blue);
     /*Background toggle menu viereck*/
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -193,7 +220,7 @@ body {
 
   #menu li {
     padding: 10px 0;
-    font-size: 22px;
+    /*font-size: 22px;*/
     background-color: transparent;
     /*durchsichtig*/
   }
@@ -213,7 +240,7 @@ body {
   }
 
   header {
-    padding-bottom: 10px;
+    padding-bottom: 80px;
     /*leerer Platz zum text*/
   }
 
@@ -221,7 +248,8 @@ body {
     z-index: 3;
     margin: 0px;
     padding: 5px;
-    padding-left: 70px;
+    padding-left: 40px;
+    padding-top: 33px;
     width: auto;
     text-align: left;
     top: 0px;
@@ -229,18 +257,23 @@ body {
   }
 
   #menu {
-    text-align: right;
+    text-align: center;
     margin: 0px;
-    padding: 10px;
+    /*padding: 10px;*/
     /*beeinflusst höhe navbar*/
     padding-right: 70px;
     width: 100%;
+    height: 100px;
     position: fixed;
     top: 0px;
     right: 0px;
     z-index: 2;
-    background-color: var(--plainly_dark_blue);
+    background-color: var(--light_blue_font);
     /*Hintergrundfarbe Navigation*/
+    border-top: var(--light_blue);
+    border-width: 0px;;
+    border-top-width: 15px;
+    border-style: solid;
   }
 
   #menu ul {
@@ -257,17 +290,18 @@ body {
   }
 
   #menu a {
-    color: var(--plainly_white);
+    color: var(--white);
     /*Textfarbe in nav*/
     text-decoration: none;
-    padding: 8px;
-    margin: 4px;
+    padding: 0px;
+    margin: 40px;
+    top: 38px;
     background-color: transparent;
     /*durchsichtig*/
   }
 
   #menu a:hover {
-    color: var(--accentcolor);
+    color: var(--red);
   }
 }
 
@@ -276,13 +310,13 @@ main {
 }
 
 main a {
-  color: var(--plainly_blue);
+  color: var(--light_blue);
   text-decoration: none;
   font-weight: 500;
 }
 
 a:hover {
-  color: var(--accentcolor);
+  color: var(--red);
 }
 
 .content {
@@ -300,7 +334,10 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 10px;
+}
+
+main .container {
+  gap: 40px;
 }
 
 .item {
@@ -309,18 +346,19 @@ section {
   flex-shrink: 1;
 }
 
+.grid_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
 .center {
   margin: 0 auto;
 }
 
 .colorinvert {
   padding: 10px;
-  background-color: var(--plainly_dark_blue);
-  color: var(--plainly_white);
-}
-
-.colordifferent {
-  background-color: var(--transparent_white);
+  background-color: var(--dark_blue);
+  color: var(--white);
 }
 
 .dynamicimg {
@@ -330,12 +368,26 @@ section {
   max-height: 200px;
 }
 
+.newsroundup {
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--background_blue);
+  background-image: url(pictures/ellipse_news.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 653px;
+}
+
+.newsroundup_content {
+  max-width: 588px;
+}
+
 /* Start Contact Form */
 
 .contact-form {
   max-width: 400px;
   /*margin: 0 auto;*/
-  background: var(--transparent_white);
+  background: var(--white);
   padding: 25px;
   margin: 0px;
   /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
@@ -355,7 +407,7 @@ section {
   width: calc(100% - 20px);
   border: 1px solid #ccc;
   /*Border Textfelder ohne hover*/
-  background: var(--plainly_white);
+  background: var(--white);
   /*margin: 0 0 5px;*/
   /*Abstand Eingabefelder nach unten*/
   padding: 10px;
@@ -388,9 +440,9 @@ section {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: var(--plainly_blue);
+  background: var(--light_blue);
   /*Button bg*/
-  color: var(--plainly_white);
+  color: var(--white);
   /*Button Textfarbe*/
   margin: 0px;
   /*margin: 0 0 5px;*/
@@ -400,7 +452,7 @@ section {
 
 .contact-form button[type="submit"]:hover,
 .button:hover {
-  background: var(--accentcolor);
+  background: var(--red);
   /*Button bg hover*/
   -webkit-transition: backgroundcolor 0.3s ease-in-out;
   -moz-transition: backgroundcolor 0.3s ease-in-out;
@@ -433,25 +485,40 @@ section {
 /* End Contact Form */
 
 .button:hover {
-  color: var(--plainly_white);
+  color: var(--white);
 }
 
 footer {
-  background-color: var(--plainly_dark_blue);
+  background-color: var(--muted_red);
   padding: 5px;
+  width: 100%;
+}
+
+footer div {
+  gap: 0px;
+}
+
+
+.li_right {
+  text-align: right;
+}
+
+footer li {
+  gap: 40px;
 }
 
 footer li {
   display: inline;
-  padding: 5px;
+  padding: 0px;
 }
 
 footer a {
-  color: var(--plainly_white);
+  color: var(--dark_blue);
+  font-weight: unset;
 }
 
 footer a:hover {
-  color: var(--accentcolor);
+  color: var(--dark_blue);
 }
 
 .troubleshooting {
