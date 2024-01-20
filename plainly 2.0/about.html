@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>plainly-app</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" type="text/css" rel="stylesheet" />
+
+  <!--Mail-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("NL9FjzexdqNllEQiv");
+    })();
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav role="navigation">
+      <div class="logo">
+        <h1><a href="index.html">Plainly.</a></h1>
+      </div>
+
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="#info">
+            <li>Info</li>
+          </a>
+          <a href="#team">
+            <li>Team</li>
+          </a>
+          <a href="#contact">
+            <li>Contact</li>
+          </a>
+          <a href="">
+            <li>FAQs</li>
+          </a>
+          <a href="about.html">
+            <li>About/Impressum</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <p class="colorinvert">Veraltet:</p>
+    <h1>Site under construction</h1>
+    <p>
+      Plainly ist ein Projekt im Rahmen des Studiums an der Hochschule der Medien Stuttgart<br>
+      Varantwortlich für diese Website: Svenja Lutz<br>
+      Kontakt möglich per E-Mail unter: contact@plainly-app.de<br>
+    </p>
+    <!--
+        Erforderlich laut https://www.ihk-muenchen.de/de/Service/Recht-und-Steuern/Internetrecht/Impressum-im-Internet/
+        Name des Unternehmens
+        Name der verantwortlichen Person(en)
+        Anschrift der Niederlassung (Haus-Adresse, nicht nur Postfach)
+        Kontaktdaten zur schnellen unmittelbaren Erreichbarkeit - am besten: Telefonnummer und Emailadresse.
+      -->
+  </main>
+
+  <footer>
+    <ul>
+      <a href="index.html">
+        <li>Home</li>
+      </a>
+      <a href="about.html">
+        <li>Impressum</li>
+      </a>
+    </ul>
+  </footer>
+  <script src="./app.js"></script>
+</body>
+
+</html>
